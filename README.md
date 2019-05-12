@@ -1,24 +1,10 @@
 # Book by the Bay Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is a website application that helps the user find bookstore recommendations in the Bay Area.
 
-Things you may want to cover:
+### Features
+
+- Quiz to find bookstore suggestions based on answers
+- Google map directions to bookstore
 
 * Ruby version 5.0.7.2
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
