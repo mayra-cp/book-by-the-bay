@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bookstore.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bookstore.description %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @bookstore.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @bookstore.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_bookstore_path(@bookstore) %> |
+<%= link_to 'Back', bookstores_path %>
