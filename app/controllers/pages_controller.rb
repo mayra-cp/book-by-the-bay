@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
-    @posts = Bookstore.all
+    @bookstores = Bookstore.all
+    @questions = Quiz.all
   end
 
   def about
