@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 20190513032154) do
   end
 
   create_table "quizzes", force: :cascade do |t|
-    t.string   "question"
-    t.string   "answer_1"
-    t.string   "answer_2"
-    t.string   "answer_3"
+    t.text     "question"
+    t.text     "answer_1"
+    t.text     "answer_2"
+    t.text     "answer_3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
