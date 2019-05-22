@@ -5,11 +5,12 @@
 <br>
 
 <% @bookstores.each do |bookstore| %>
-    <p><%= bookstore.name %></p>
+    <h3><%= link_to bookstore.name, bookstore_path(bookstore) %></h3>
+    <em>About the Bookstore:</em>
     <p><%= bookstore.description %></p>
+    <em>Location</em>
     <p><%= bookstore.latitude %><p>
     <p><%= bookstore.longitude %></p>
-    <p><%= link_to 'Show', bookstore %></p>
-    <%= link_to 'Edit', edit_bookstore_path(bookstore.id) %>
+    <%= link_to 'Edit', edit_bookstore_path(bookstore) %>
     <p><%= link_to 'Remove', bookstore, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 <% end %>

@@ -1,23 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @bookstore.name %>
-</p>
+</h1>
 
+<em>About the Bookstore:</em>
 <p>
-  <strong>Description:</strong>
   <%= @bookstore.description %>
 </p>
 
+ <em>Location</em>
 <p>
-  <strong>Latitude:</strong>
-  <%= @bookstore.latitude %>
+  <%= @bookstore.latitude %> Latitude
 </p>
 
 <p>
-  <strong>Longitude:</strong>
-  <%= @bookstore.longitude %>
+  <%= @bookstore.longitude %> Longitude
 </p>
 
 <%= link_to 'Edit', edit_bookstore_path(@bookstore) %> |
