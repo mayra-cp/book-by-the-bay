@@ -19,12 +19,13 @@ class BookstoresController < ApplicationController
 
   # GET /bookstores/1/edit
   def edit
+    @bookstore = Bookstore.find(params[:id])
   end
 
   # POST /bookstores
   # POST /bookstores.json
   def create
-    @bookstore = Bookstore.new(params.require(:bookstore).permit(:description, :latitude, :longitude))
+    @bookstore = Bookstore.new(bookstore_params)
 
     respond_to do |format|
       if @bookstore.save
@@ -42,7 +43,7 @@ class BookstoresController < ApplicationController
   def update
     respond_to do |format|
       if @bookstore.update(bookstore_params)
-        format.html { redirect_to @bookstore, notice: 'Bookstore was successfully updated.' }
+        format.html { redirect_to bookstores_path, notice: 'Bookstore was successfully updated.' }
         format.json { render :show, status: :ok, location: @bookstore }
       else
         format.html { render :edit }
