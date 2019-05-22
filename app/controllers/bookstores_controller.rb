@@ -24,11 +24,11 @@ class BookstoresController < ApplicationController
   # POST /bookstores
   # POST /bookstores.json
   def create
-    @bookstore = Bookstore.new(bookstore_params)
+    @bookstore = Bookstore.new(params.require(:bookstore).permit(:description, :latitude, :longitude))
 
     respond_to do |format|
       if @bookstore.save
-        format.html { redirect_to @bookstore, notice: 'Bookstore was successfully created.' }
+        format.html { redirect_to bookstores_path, notice: 'Bookstore was successfully added.' }
         format.json { render :show, status: :created, location: @bookstore }
       else
         format.html { render :new }
