@@ -1,15 +1,15 @@
 <h1>Bookstores</h1>
 
+<%= link_to 'Add New Bookstore', new_bookstore_path %>
+
+<br>
+
 <% @bookstores.each do |bookstore| %>
     <p><%= bookstore.name %></p>
     <p><%= bookstore.description %></p>
     <p><%= bookstore.latitude %><p>
     <p><%= bookstore.longitude %></p>
     <p><%= link_to 'Show', bookstore %></p>
-    <p><%link_to 'Edit', edit_bookstore_path(bookstore) %></p>
+    <%= link_to 'Edit', edit_bookstore_path(bookstore.id) %>
     <p><%= link_to 'Remove', bookstore, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 <% end %>
-
-<br>
-
-<%= link_to 'New Bookstore', new_bookstore_path %>
