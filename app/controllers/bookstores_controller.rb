@@ -10,7 +10,6 @@ class BookstoresController < ApplicationController
   # GET /bookstores/1
   # GET /bookstores/1.json
   def show
-    @bookstore = Bookstore.find(params[:id])
   end
 
   # GET /bookstores/new
@@ -20,7 +19,6 @@ class BookstoresController < ApplicationController
 
   # GET /bookstores/1/edit
   def edit
-    @bookstore = Bookstore.find(params[:id])
   end
 
   # POST /bookstores
@@ -56,7 +54,13 @@ class BookstoresController < ApplicationController
   # DELETE /bookstores/1
   # DELETE /bookstores/1.json
   def destroy
+    # Perform the lookup
+    @bookstore = Bookstore.find(params[:id])
+
+    # Destroy/delete the record
     @bookstore.destroy
+
+    # Redirect
     respond_to do |format|
       format.html { redirect_to bookstores_url, notice: 'Bookstore was successfully removed.' }
       format.json { head :no_content }
