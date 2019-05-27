@@ -2,6 +2,8 @@
 
 <h1>Bookstores</h1>
 
+  <%= link_to 'New Bookstore', new_bookstore_path %>
+
   <% @bookstores.each do |bookstore| %>
     <tr>
       <h2><%= bookstore.name %></h2>
@@ -9,11 +11,6 @@
       <p><%= bookstore.latitude %></p>
       <p><%= bookstore.longitude %></p>
       <td><%= link_to 'Edit', edit_bookstore_path(bookstore) %></td>
-      <td><%= link_to 'Remove', bookstore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= button_to 'Delete', bookstore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
-
-
-<br>
-
-<%= link_to 'New Bookstore', new_bookstore_path %>

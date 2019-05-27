@@ -56,7 +56,7 @@ class BookstoresController < ApplicationController
   def destroy
     @bookstore.destroy
     respond_to do |format|
-      format.html { redirect_to bookstores_url, notice: 'Bookstore was successfully removed.' }
+      format.html { redirect_to bookstores_path, notice: 'Bookstore was successfully removed.' }
       format.json { head :no_content }
     end
   end
