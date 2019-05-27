@@ -55,9 +55,11 @@ class BookstoresController < ApplicationController
   # DELETE /bookstores/1
   # DELETE /bookstores/1.json
   def destroy
+    @bookstore = Bookstore.find(params[:id])
+
     @bookstore.destroy
     respond_to do |format|
-      format.html { redirect_to bookstores_path, notice: 'Bookstore was successfully removed.' }
+      format.html { redirect_to bookstores_url, notice: 'Bookstore was successfully removed.' }
       format.json { head :no_content }
     end
   end
