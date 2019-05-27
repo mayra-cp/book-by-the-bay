@@ -1,18 +1,12 @@
- <p id="notice"d><% notice %></p>
+<p id="notice"d><% notice %></p>
 
 <h1>Bookstores</h1>
 
-<%= link_to 'Add New Bookstore', new_bookstore_path %>
+<%= @bookstores.each do |bookstore| %>
+  <p><%= bookstore.name %></p>
+  <p><%= bookstore.description %></p>
+  <p><%= bookstore.latitude %></p>
+  <p><%= bookstore.longitude %></p>
 
-<br>
-
-<% @bookstores.each do |bookstore| %>
-    <h3><%= link_to bookstore.name, bookstore_path(bookstore) %></h3>
-    <em>About the Bookstore:</em>
-    <p><%= bookstore.description %></p>
-    <em>Location</em>
-    <p><%= bookstore.latitude %><p>
-    <p><%= bookstore.longitude %></p>
-    <%= link_to 'Edit', edit_bookstore_path(bookstore) %>
-    <%= link_to 'Delete', bookstore_path(bookstore), method: :delete, data: {confirm: 'Are you sure?'} %>
 <% end %>
+
