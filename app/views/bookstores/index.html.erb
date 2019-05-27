@@ -14,5 +14,5 @@
     <p><%= bookstore.latitude %><p>
     <p><%= bookstore.longitude %></p>
     <%= link_to 'Edit', edit_bookstore_path(bookstore) %>
-    <%= link_to 'Delete', bookstore, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Delete', bookstore_path(bookstore), method: :delete, data: {confirm: 'Are you sure?'} %>
 <% end %>

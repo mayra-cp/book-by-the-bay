@@ -54,8 +54,6 @@ class BookstoresController < ApplicationController
   # DELETE /bookstores/1
   # DELETE /bookstores/1.json
   def destroy
-    # Perform the lookup
-    @bookstore = Bookstore.find(params[:id])
 
     # Destroy/delete the record
     @bookstore.destroy
