@@ -10,6 +10,7 @@ class BookstoresController < ApplicationController
   # GET /bookstores/1
   # GET /bookstores/1.json
   def show
+    @bookstore = Bookstore.find(params[:id])
   end
 
   # GET /bookstores/new
