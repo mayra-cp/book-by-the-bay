@@ -1,3 +1,5 @@
+=begin
+
 require 'rails_helper'
 
 RSpec.describe Bookstore, type: :model do
@@ -5,3 +7,5 @@ RSpec.describe Bookstore, type: :model do
     expect(Bookstore.name).to eq Bookstore.name
   end
 end
+
+=end
