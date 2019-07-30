@@ -10,6 +10,7 @@ class BookstoresController < ApplicationController
   # GET /bookstores/1
   # GET /bookstores/1.json
   def show
+    @bookstore = Bookstore.friendly.find(params[:id])
   end
 
   # GET /bookstores/new
@@ -64,7 +65,7 @@ class BookstoresController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_bookstore
-      @bookstore = Bookstore.find(params[:id])
+      @bookstore = Bookstore.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

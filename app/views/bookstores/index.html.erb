@@ -6,7 +6,7 @@
 
 <% @bookstores.each do |bookstore| %>
   <tr>
-    <h2><%= link_to bookstore.name, bookstore_show_path(bookstore) %></h2>
+    <h2><%= link_to bookstore.name, bookstore_path(bookstore) %></h2>
     <p><%= bookstore.description %></p>
     <p><%= bookstore.latitude %></p>
     <p><%= bookstore.longitude %></p>
